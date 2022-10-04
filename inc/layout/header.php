@@ -58,47 +58,14 @@
 </div>
 
 <header class="header">
-     <!-- Top bar -->
-    <div class="header__top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="header__top__left">
-                        <ul>
-                            <li><i class="fa fa-envelope"></i> <?php echo $general->email; ?></li>
-                            <li><?php echo $general->direccion; ?></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="header__top__right">
-                        <?php if ($general->facebook || $general->instagram || $general->twitter) : ?>
-                            <div class="header__top__right__social">
-                                <?php if ($general->facebook) : ?>
-                                    <a href="<?php echo $general->facebook; ?>" targte="_blank"><i class="fa fa-facebook"></i></a>
-                                <?php endif; ?>
-                                <?php if ($general->instagram) : ?>
-                                    <a href="<?php echo $general->instagram; ?>" targte="_blank"><i class="fa fa-instagram"></i></a>
-                                <?php endif; ?>
-                                <?php if ($general->twitter) : ?>
-                                    <a href="<?php echo $general->twitter; ?>" targte="_blank"><i class="fa fa-twitter"></i></a>
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-                        <div class="header__top__right__auth">
-                            <?php echo Site::getItemsSession(); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Top bar -->
+    <?php //require 'inc/partials/top-header.php'; ?>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 header__column-logo">
                 <div class="header__logo">
-                    <a href="/"><img src="<?php echo $general->logo; ?>" alt="logo"></a>
+                    <a href="/"><img class="header__logo-img" src="<?php echo $general->logo; ?>" alt="logo"></a>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -117,8 +84,11 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-lg-2">
-                <?php echo Site::getResumenCart(); ?>
+            <div class="col-lg-2 header__social">
+                <a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <?php //echo Site::getResumenCart(); ?>
             </div>
         </div>
         <div class="humberger__open">

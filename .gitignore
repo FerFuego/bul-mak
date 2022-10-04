@@ -1,1 +1,5 @@
 inc/functions/class-connection.php
+./inc/functions/class-connection.php
+
+node_modules
+vendor

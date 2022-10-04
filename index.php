@@ -5,32 +5,34 @@
 <!-- Header Section End -->
 
 <!-- Hero Section Begin -->
-<section class="hero hero-normal">
+<!-- <section class="hero hero-normal">
     <div class="container">
         <div class="row">
-            <?php require_once('inc/parts/categories.php'); ?>
-            <?php require_once('inc/parts/search.php'); ?>
+            <?php //require_once('inc/parts/categories.php'); ?>
+            <?php //require_once('inc/parts/search.php'); ?>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Hero Section End -->
 
 <!-- Slider Begin -->
-<?php if ($_SERVER['REQUEST_URI'] === '/' || $_SERVER['REQUEST_URI'] === '/index.php' || $_SERVER['REQUEST_URI'] === '/nuevo/' || $_SERVER['REQUEST_URI'] === '/nuevo/index.php') :
-    require_once('inc/parts/slider.php'); 
-endif; ?>
+<?php require_once('inc/parts/slider.php'); ?>
 <!-- Slider End -->
 
+<!-- Contact -->
+<?php require_once('inc/parts/contact-data.php'); ?>
+<!-- End Contact -->
+
 <!-- Banner Begin -->
-<?php require_once('inc/parts/banner-section.php'); ?>
+<?php //require_once('inc/parts/banner-section.php'); ?>
 <!-- Banner End -->
 
 <!-- Categories Section Begin -->
-<?php require_once('inc/parts/categories-section.php'); ?>
+<?php //require_once('inc/parts/categories-section.php'); ?>
 <!-- Categories Section End -->
 
 <!-- Featured Section Begin -->
-<?php require_once('inc/parts/featured-products-section.php'); ?>
+<?php //require_once('inc/parts/featured-products-section.php'); ?>
 <!-- Featured Section End -->
 
 <!-- Latest Product Section Begin -->
