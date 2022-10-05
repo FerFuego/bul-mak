@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="<?php echo str_replace(['/','.php'], ['',''], $_SERVER['PHP_SELF']); ?>">
 
 <!-- Page Preloder -->
 <div id="preloder">

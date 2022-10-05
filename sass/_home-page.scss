@@ -12,18 +12,16 @@
         .owl-nav {
 
             button {
-                font-size: 18px;
-                color: $normal-color;
+                font-size: 42px;
+                color: #6f6f6f;
                 height: 70px;
                 width: 30px;
                 line-height: 70px;
                 text-align: center;
-                border: 1px solid $border;
                 position: absolute;
                 left: -35px;
                 top: 50%;
                 -webkit-transform: translateY(-35px);
-                background: $white-color;
 
                 &.owl-next {
                     left: auto;
@@ -108,6 +106,7 @@
         padding-top: 100px;
     }
 }
+
 /*---------------------
   Featured
 -----------------------*/

@@ -27,6 +27,10 @@
 <?php //require_once('inc/parts/banner-section.php'); ?>
 <!-- Banner End -->
 
+<!-- Marcas Section Begin -->
+<?php require_once('inc/parts/marcas-section.php'); ?>
+<!-- Marcas Section End -->
+
 <!-- Categories Section Begin -->
 <?php //require_once('inc/parts/categories-section.php'); ?>
 <!-- Categories Section End -->

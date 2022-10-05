@@ -2,6 +2,9 @@
 body {
     background-color: $black-color;
 }
+body.cpanel {
+    background-color: $white-color;
+}
 .header {
     background-color: $primary-color;
     &__column-logo {
@@ -81,6 +84,82 @@ body {
         }
     }
 }
+.contact-data {
+    background: #343a40;
+}
+/*---------------------
+  Marcas
+-----------------------*/
+.marcas {
+    background-color: $white-color;
+}
+.marcas__item {
+    height: 233px;
+    position: relative;
+    padding-top: 1px;
+
+    img {
+        width: 60% !important;
+        margin: 50px auto 0;
+    }
+
+    h5 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        bottom: 20px;
+        text-align: center;
+
+        a {
+            font-size: 18px;
+            color: $normal-color;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 0 10px;
+            background: $white-color;
+            display: block;
+        }
+    }
+}
+
+.marcas__slider {
+
+    .col-lg-3 {
+        max-width: 100%;
+    }
+
+    &.owl-carousel {
+
+        .owl-nav {
+
+            button {
+                font-size: 42px;
+                color: #6f6f6f;
+                height: 70px;
+                width: 30px;
+                line-height: 70px;
+                text-align: center;
+                position: absolute;
+                left: -35px;
+                top: 50%;
+                -webkit-transform: translateY(-35px);
+
+                &.owl-next {
+                    left: auto;
+                    right: -35px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .marcas {
+        padding-top: 100px;
+    }
+}
 .footer {
     background: #343a40;
     &__about {
@@ -97,4 +176,10 @@ body {
         }
     }
 
+}
+
+.nosotros {
+    &__title {
+        color: $white-color;
+    }
 }

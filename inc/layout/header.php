@@ -85,9 +85,9 @@
                 </nav>
             </div>
             <div class="col-lg-2 header__social">
-                <a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=543537550444&text&type=phone_number&app_absent=0" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/bulmakferreteria/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/bulmakferreteria/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <?php //echo Site::getResumenCart(); ?>
             </div>
         </div>

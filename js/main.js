@@ -86,6 +86,41 @@
         }
     });
 
+     /*-----------------------
+        Marcas Slider
+    ------------------------*/
+    $(".marcas__slider").owlCarousel({
+        loop: true,
+        margin: 0,
+        items: 4,
+        dots: false,
+        nav: true,
+        navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        responsive: {
+
+            0: {
+                items: 1,
+            },
+
+            480: {
+                items: 2,
+            },
+
+            768: {
+                items: 3,
+            },
+
+            992: {
+                items: 4,
+            }
+        }
+    });
+
 
     $('.hero__categories__all').on('click', function(){
         $('.hero__categories ul').slideToggle(400);
@@ -157,16 +192,16 @@
         maxamount = $("#maxamount"),
         minPrice = rangeSlider.data('min'),
         maxPrice = rangeSlider.data('max');
-    rangeSlider.slider({
-        range: true,
-        min: minPrice,
-        max: maxPrice,
-        values: [minPrice, maxPrice],
-        slide: function (event, ui) {
-            minamount.val('$' + ui.values[0]);
-            maxamount.val('$' + ui.values[1]);
-        }
-    });
+        rangeSlider.slider({
+            range: true,
+            min: minPrice,
+            max: maxPrice,
+            values: [minPrice, maxPrice],
+            slide: function (event, ui) {
+                minamount.val('$' + ui.values[0]);
+                maxamount.val('$' + ui.values[1]);
+            }
+        });
     minamount.val('$' + rangeSlider.slider("values", 0));
     maxamount.val('$' + rangeSlider.slider("values", 1));
 
@@ -221,8 +256,8 @@ $('.owl-banner-carousel').owlCarousel({
     margin: 0,
     items: 1,
     dots: true,
-    nav: false,
-    navText: false,
+    nav: true,
+    navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
     smartSpeed: 1200,
     autoHeight: true,
     autoplay: true
