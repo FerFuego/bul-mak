@@ -1,3 +1,5 @@
+<?php if (SITE::__TOP_HEADER__) : ?>
+
 <div class="header__top">
     <div class="container">
         <div class="row">
@@ -32,3 +34,5 @@
         </div>
     </div>
 </div>
+
+<?php endif; ?>

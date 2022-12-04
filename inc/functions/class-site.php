@@ -4,8 +4,11 @@
  */
 Class Site {
 
-    const GOOGLE_API = '6LehItsUAAAAAJgi5I6XbtuH6sRzbFhiYNQwZSed';
-    const SITE_KEY = '6LehItsUAAAAAKkyZXB_Aon0DNX7zqMl8OE7jgAO';
+    const __STORE__      = false;
+    const __TOP_HEADER__ = false;
+    const __HERO__       = false;
+    const GOOGLE_API     = '6LehItsUAAAAAJgi5I6XbtuH6sRzbFhiYNQwZSed';
+    const SITE_KEY       = '6LehItsUAAAAAKkyZXB_Aon0DNX7zqMl8OE7jgAO';
 
     public function __construct() {
 
@@ -14,7 +17,6 @@ Class Site {
         require('autoload.php');
 
         $this->getItemsSession();
-
     }
 
     public static function normalize_title() {
@@ -27,6 +29,8 @@ Class Site {
     }
 
     public static function getItemsSession() {
+
+        if (!Site::__STORE__) return;
 
         if (isset ($_SESSION["user"])) {
 

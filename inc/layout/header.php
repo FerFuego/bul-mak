@@ -18,11 +18,17 @@
         <ul>
             <li class="<?php echo (Site::normalize_title() === '')? 'active':''?>"><a href="./">Home</a></li>
             <li class="<?php echo (Site::normalize_title() === 'Nosotros')? 'active':''?>"><a href="./nosotros.php">Nosotros</a></li>
-            <li class="<?php echo (Site::normalize_title() === 'Productos')? 'active':''?>"><a href="./productos.php">Productos</a></li>
-            <?php if ( isset($_SESSION["id_user"]) ) : ?>
-                <li class="<?php echo (Site::normalize_title() === 'Carrito')? 'active':''?>"><a href="./carrito.php">Carrito</a></li>
+
+            <?php if (Site::__STORE__) : ?>
+                <li class="<?php echo (Site::normalize_title() === 'Productos')? 'active':''?>"><a href="./productos.php">Productos</a></li>
+
+                <?php if ( isset($_SESSION["id_user"]) ) : ?>
+                    <li class="<?php echo (Site::normalize_title() === 'Carrito')? 'active':''?>"><a href="./carrito.php">Carrito</a></li>
+                <?php endif; ?>
             <?php endif; ?>
+
             <li class="<?php echo (Site::normalize_title() === 'Contacto')? 'active':''?>"><a href="./contacto.php">Contacto</a></li>
+
             <?php if ( Site::is_Admin() ) : ?>
                 <li><a href="cpanel.php" class="<?php echo (!isset($opcion) || $opcion == '') ? 'active' : '';?> item">Dashboard</a></li>
                 <li><a href="cpanel.php?opcion=importar" class="<?php echo (isset($opcion) && $opcion == 'importar') ? 'active' : '';?> item">Importar Productos</a></li>
@@ -59,7 +65,7 @@
 
 <header class="header">
     <!-- Top bar -->
-    <?php //require 'inc/partials/top-header.php'; ?>
+    <?php require 'inc/partials/top-header.php'; ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -73,11 +79,19 @@
                     <ul>
                         <li class="<?php echo (Site::normalize_title() === '')? 'active':''?>"><a href="./">Inicio</a></li>
                         <li class="<?php echo (Site::normalize_title() === 'Nosotros')? 'active':''?>"><a href="./nosotros.php">Nosotros</a></li>
-                        <li class="<?php echo (Site::normalize_title() === 'Productos')? 'active':''?>"><a href="./productos.php">Productos</a></li>
-                        <?php if ( isset($_SESSION["id_user"]) ) : ?>
-                            <li class="<?php echo (Site::normalize_title() === 'Carrito')? 'active':''?>"><a href="./carrito.php">Carrito</a></li>
+
+                        <?php if (Site::__STORE__) : ?>
+
+                            <li class="<?php echo (Site::normalize_title() === 'Productos')? 'active':''?>"><a href="./productos.php">Productos</a></li>
+                            
+                            <?php if ( isset($_SESSION["id_user"]) ) : ?>
+                                <li class="<?php echo (Site::normalize_title() === 'Carrito')? 'active':''?>"><a href="./carrito.php">Carrito</a></li>
+                            <?php endif; ?>
+
                         <?php endif; ?>
+                        
                         <li class="<?php echo (Site::normalize_title() === 'Contacto')? 'active':''?>"><a href="./contacto.php">Contacto</a></li>
+                        
                         <?php if ( Site::is_Admin() ) : ?>
                             <li class="<?php echo (Site::normalize_title() === 'CPanel')? 'active':''?>"><a href="./cpanel.php">Admin</a></li>
                         <?php endif; ?>
@@ -85,10 +99,19 @@
                 </nav>
             </div>
             <div class="col-lg-2 header__social">
-                <a href="https://api.whatsapp.com/send/?phone=543537550444&text&type=phone_number&app_absent=0" target="_blank"><i class="fa fa-whatsapp"></i></a>
-                <a href="https://www.facebook.com/bulmakferreteria/" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                <a href="https://www.instagram.com/bulmakferreteria/" target="_blank"><i class="fa fa-instagram"></i></a>
-                <?php //echo Site::getResumenCart(); ?>
+                <?php if ($general->whatsapp) : ?>
+                    <a href="<?php echo $general->whatsapp; ?>" targte="_blank"><i class="fa fa-whatsapp"></i></a>
+                <?php endif; ?>
+                <?php if ($general->facebook) : ?>
+                    <a href="<?php echo $general->facebook; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <?php endif; ?>
+                <?php if ($general->instagram) : ?>
+                    <a href="<?php echo $general->instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                <?php endif; ?>
+                <?php if ($general->twitter) : ?>
+                    <a href="<?php echo $general->twitter; ?>" targte="_blank"><i class="fa fa-twitter"></i></a>
+                <?php endif; ?>
+                <?php echo (Site::__STORE__) ? Site::getResumenCart() : ''; ?>
             </div>
         </div>
         <div class="humberger__open">

@@ -5,6 +5,7 @@
 <!-- Header Section End -->
 
 <!-- Hero Section Begin -->
+<?php if (Site::__HERO__) : ?>
 <section class="hero hero-normal">
     <div class="container">
         <div class="row">
@@ -13,6 +14,7 @@
         </div>
     </div>
 </section>
+<?php endif; ?>
 <!-- Hero Section End -->
 
 <!-- Breadcrumb Section Begin -->

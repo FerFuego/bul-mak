@@ -1,13 +1,13 @@
 <?php require_once('inc/layout/head.php'); ?>
 
 <!-- Verify Admin -->
-<?php /* if ( ! Site::is_Admin() ) {
+<?php if ( ! Site::is_Admin() ) {
     $host = $_SERVER['HTTP_HOST'];
     $page = 'index.php';
     $url = "http://$host/$page";
     header( "Location: $url", 401 );
     die();
-}  */?>
+} ?>
 <!-- End Verify Admin -->
 
 <!-- Header Section Begin -->
