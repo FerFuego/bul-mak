@@ -22,10 +22,18 @@
                 left: -35px;
                 top: 50%;
                 -webkit-transform: translateY(-35px);
-
+                // mobile
+                @media (max-width: 768px) {
+                    color: #fff;
+                    left: 10px;
+                }
                 &.owl-next {
                     left: auto;
                     right: -35px;
+                    // mobile
+                    @media (max-width: 768px) {
+                        right: 10px;
+                    }
                 }
             }
         }
@@ -91,10 +99,19 @@
                 top: 50%;
                 -webkit-transform: translateY(-35px);
                 background: $white-color;
+                // mobile
+                @media (max-width: 768px) {
+                    color: #fff;
+                    left: 10px;
+                }
 
                 &.owl-next {
                     left: auto;
                     right: -35px;
+                    // mobile
+                    @media (max-width: 768px) {
+                        right: 10px;
+                    }
                 }
             }
         }

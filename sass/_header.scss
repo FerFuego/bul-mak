@@ -77,6 +77,10 @@
         &:last-child {
             margin-right: 0;
         }
+        // mobile
+        @media (max-width: 768px) {
+            color: #e1e1e1;
+        }
     }
 }
 
@@ -185,6 +189,7 @@
 
 .header__logo {
     padding: 15px 0;
+    text-align: center;
 
     @media (max-width: 768px) {
         width: 80%;

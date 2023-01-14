@@ -23,15 +23,41 @@ body.cpanel {
             color: $white-color !important;
             font-weight: 700;
         }
+        // mobile 
+        @media (max-width: 768px) {
+            padding: 15px 0;
+            justify-content: center;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            li {
+                margin-right: 0 !important;
+            }
+            a {
+                padding: 0 !important;
+            }
+        }
     }
     &__social {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         height: 100px;
+        // mobile 
+        @media (max-width: 768px) {
+            justify-content: flex-end;
+            height: 30px;
+        }
         a {
             font-size: 35px;
             color: $white-color;
+            // mobile 
+            @media (max-width: 768px) {
+                font-size: 20px;
+                margin: 0 5px;
+            }
         }
     }
 }
@@ -65,6 +91,11 @@ body.cpanel {
         p {
             color: $white-color;
             margin-bottom: 0;
+            //mobile
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
     }
     &__address {
@@ -81,6 +112,11 @@ body.cpanel {
         p {
             color: $white-color;
             margin-bottom: 0;
+            //mobile
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
     }
 }
@@ -101,6 +137,10 @@ body.cpanel {
     img {
         width: 60% !important;
         margin: 50px auto 0;
+        // mobile
+        @media (max-width: 768px) {
+            margin: 20px auto;
+        }
     }
 
     h5 {
@@ -146,9 +186,19 @@ body.cpanel {
                 top: 50%;
                 -webkit-transform: translateY(-35px);
 
+                // mobile
+                @media (max-width: 768px) {
+                    color: #252525;
+                    left: 10px;
+                }
+
                 &.owl-next {
                     left: auto;
                     right: -35px;
+                    // mobile
+                    @media (max-width: 768px) {
+                        right: 10px;
+                    }
                 }
             }
         }
@@ -157,7 +207,7 @@ body.cpanel {
 
 @media (max-width: 768px) {
     .marcas {
-        padding-top: 100px;
+        padding-top: 0px;
     }
 }
 .footer {

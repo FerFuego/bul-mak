@@ -404,12 +404,12 @@
     .humberger__open {
       display: block;
       font-size: 22px;
-      color: #1c1c1c;
+      color: #ccc;
       height: 35px;
       width: 35px;
       line-height: 33px;
       text-align: center;
-      border: 1px solid #1c1c1c;
+      border: 1px solid #ccc;
       cursor: pointer;
       position: absolute;
       right: 15px;
@@ -425,7 +425,7 @@
   
     .humberger__menu__wrapper {
       width: 345px;
-      background: $white-color;
+      background: #1c1c1c;
       position: fixed;
       left: -345px;
       top: 0;
@@ -459,13 +459,13 @@
   
         li {
           font-size: 14px;
-          color: #1c1c1c;
+          color: $white-color;
           position: relative;
           line-height: 30px;
           list-style: none;
   
           i {
-            color: $heading-color-2;
+            color: #e1e1e1;
             margin-right: 5px;
           }
         }
@@ -573,7 +573,7 @@
       }
   
       .slicknav_nav a {
-        color: $normal-color;
+        color: #e1e1e1;
         font-size: 16px;
         font-weight: 600;
         margin: 0;
