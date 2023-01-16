@@ -94,6 +94,8 @@
                         
                         <?php if ( Site::is_Admin() ) : ?>
                             <li class="<?php echo (Site::normalize_title() === 'CPanel')? 'active':''?>"><a href="./cpanel.php">Admin</a></li>
+                        <?php elseif (Site::__PANEL__ && !Site::__TOPHEADER__): ?>
+                            <li><?php echo Site::getItemsSession(); ?></li>
                         <?php endif; ?>
                     </ul>
                 </nav>

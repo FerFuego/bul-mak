@@ -16,13 +16,13 @@ if( !empty($_POST) && isset($_POST['action']) && $_POST['action'] == 'actionLogi
     $login = 'false';
     $updated = false;
 
-    $request = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".Site::GOOGLE_API."&response=".$recaptcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+    /* $request = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".Site::GOOGLE_API."&response=".$recaptcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
     $response = json_decode($request);
     
     if ( $response->success === false ) {
         echo 'Captcha Incorrecto!';
         die();
-    }
+    } */
 
     $access = new Login($user, $pass);
     $result = $access->loginProcess();

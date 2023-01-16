@@ -1,4 +1,4 @@
-<?php if (SITE::__TOP_HEADER__) : ?>
+<?php if (SITE::__TOPHEADER__) : ?>
 
 <div class="header__top">
     <div class="container">
@@ -6,8 +6,12 @@
             <div class="col-lg-6 col-md-6">
                 <div class="header__top__left">
                     <ul>
-                        <li><i class="fa fa-envelope"></i> <?php //echo $general->email; ?></li>
-                        <li><?php echo $general->direccion; ?></li>
+                        <?php if ($general->email) : ?>
+                            <li><i class="fa fa-envelope"></i> <?php echo $general->email; ?></li>
+                        <?php endif; ?>
+                        <?php if ($general->direccion) : ?>
+                            <li><?php echo $general->direccion; ?></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>

@@ -1373,6 +1373,18 @@ ol {
   height: 200px;
 }
 
+.banner-full {
+  background-color: white;
+  margin: 0 !important;
+  padding: 15px 0 0;
+}
+.banner-full__pic {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+}
+
 /*---------------------
   Latest Product
 -----------------------*/
@@ -1689,7 +1701,7 @@ ol {
 }
 
 .sidebar-cpanel .sidebar-container {
-  background-color: #7fad39;
+  background-color: #ef1925;
   height: 100%;
 }
 .sidebar-cpanel .sidebar-container ul li a {
@@ -3097,7 +3109,7 @@ ol {
 .map .map-inside {
   position: absolute;
   left: 50%;
-  top: 160px;
+  top: 23px;
   -webkit-transform: translateX(-175px);
   -ms-transform: translateX(-175px);
   transform: translateX(-175px);

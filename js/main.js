@@ -255,7 +255,7 @@ $('.owl-banner-carousel').owlCarousel({
     loop: true,
     margin: 0,
     items: 1,
-    dots: true,
+    dots: false,
     nav: true,
     navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
     smartSpeed: 1200,

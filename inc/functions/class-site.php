@@ -5,8 +5,9 @@
 Class Site {
 
     const __STORE__      = false;
-    const __TOP_HEADER__ = false;
+    const __TOPHEADER__  = false;
     const __HERO__       = false;
+    const __PANEL__      = true;
     const GOOGLE_API     = '6LehItsUAAAAAJgi5I6XbtuH6sRzbFhiYNQwZSed';
     const SITE_KEY       = '6LehItsUAAAAAKkyZXB_Aon0DNX7zqMl8OE7jgAO';
 
@@ -29,9 +30,7 @@ Class Site {
     }
 
     public static function getItemsSession() {
-
-        if (!Site::__STORE__) return;
-
+        
         if (isset ($_SESSION["user"])) {
 
             ob_start();

@@ -1,7 +1,7 @@
 <?php require_once('inc/layout/head.php'); ?>
 
 <!-- Verify Admin -->
-<?php if ( ! Site::is_Admin() ) {
+<?php if ( ! Site::is_Admin() || ! Site::__PANEL__) {
     $host = $_SERVER['HTTP_HOST'];
     $page = 'index.php';
     $url = "http://$host/$page";

@@ -296,6 +296,17 @@
         height: 200px;
     }
 }
+.banner-full {
+    background-color: white;
+    margin: 0 !important;
+    padding: 15px 0 0;
+    &__pic {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 200px;
+    }
+}
 /*---------------------
   Latest Product
 -----------------------*/
