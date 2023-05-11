@@ -18,7 +18,7 @@
 <!-- Hero Section End -->
 
 <!-- Slider Begin -->
-<?php require_once('inc/parts/slider.php'); ?>
+<?php require_once('inc/parts/video.php'); ?>
 <!-- Slider End -->
 
 <!-- Contact -->

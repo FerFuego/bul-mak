@@ -1469,12 +1469,30 @@ ol {
 }
 
 /*---------------------
+  Video Hero
+-----------------------*/
+.video-hero {
+  background-color: #000;
+  position: relative;
+  height: 580px;
+  width: 100%;
+}
+.video-hero__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 580px;
+  width: 100%;
+  z-index: 1;
+}
+
+/*---------------------
   Breadcrumb
 -----------------------*/
 .breadcrumb-section {
   display: flex;
   align-items: center;
-  padding: 45px 0 40px;
+  padding: 60px 0 60px;
 }
 
 .breadcrumb__text h2 {
@@ -3789,7 +3807,7 @@ body {
   background-color: #000000;
 }
 
-body.cpanel {
+body.newcpanel {
   background-color: #ffffff;
 }
 

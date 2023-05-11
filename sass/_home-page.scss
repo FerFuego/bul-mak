@@ -405,3 +405,21 @@
 .from-blog__title {
     margin-bottom: 70px;
 }
+
+/*---------------------
+  Video Hero
+-----------------------*/
+.video-hero {
+    background-color: #000;
+    position: relative;
+    height: 580px;
+    width: 100%;
+    &__shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 580px;
+        width: 100%;
+        z-index: 1;
+    }
+}
