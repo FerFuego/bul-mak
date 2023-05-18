@@ -414,6 +414,14 @@
     position: relative;
     height: 580px;
     width: 100%;
+    @media (max-width: 768px) {
+        height: 300px;
+    }
+    iframe {
+        @media (max-width: 768px) {
+            height: 300px;
+        }
+    }
     &__shadow {
         position: absolute;
         top: 0;
@@ -421,5 +429,8 @@
         height: 580px;
         width: 100%;
         z-index: 1;
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 }

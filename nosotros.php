@@ -33,23 +33,48 @@
         </div>
 
         <div class="col-xs-12 col-sm-6">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/empresa1.jpeg" alt="empresa1">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/empresa2.jpeg" alt="empresa2">
+            <a href="img/empresa/empresa1.jpeg" data-lightbox="example-set" data-title="Empresa 1"><img class="mt-5 pt-3 pb-3" src="img/empresa/empresa1.jpeg" alt="empresa1"></a>
+            <a href="img/empresa/empresa2.jpeg" data-lightbox="example-set" data-title="Empresa 2"><img class="mt-5 pt-3 pb-3" src="img/empresa/empresa2.jpeg" alt="empresa2"></a>
         </div>
 
-        <div class="col-12">
-            <h3 class="nosotros__title">Galeria</h3><hr>
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
-            <img class="mt-5 pt-3 pb-3" src="img/empresa/" alt="">
+        <div class="col-12 mt-5">
+            <h3 class="nosotros__title">Galeria Exterior</h3><hr>
+            <div class="nosotros__gallery">
+                <?php 
+                    $directory = "fotos/exterior/";
+                    $dirint = dir($directory);
+                    while (($file = $dirint->read()) != false) :
+                        if (strpos($file,'jpg') || strpos($file,'jpeg') || strpos($file,'png')) : ?>
+                        <figure>
+                            <a class="nosotros__item" href="<?php echo $directory . $file; ?>" data-lightbox="gallery-exterior" data-title="">
+                                <img src="<?php echo $directory . $file; ?>" alt="">
+                            </a>
+                        </figure>
+                        <?php endif; 
+                    endwhile;
+                    $dirint->close();
+                ?>
+            </div>
+        </div>
+
+        <div class="col-12 mt-5">
+            <h3 class="nosotros__title">Galeria Interior</h3><hr>
+            <div class="nosotros__gallery">
+                <?php 
+                    $directory = "fotos/";
+                    $dirint = dir($directory);
+                    while (($file = $dirint->read()) != false) :
+                        if (strpos($file,'jpg') || strpos($file,'jpeg') || strpos($file,'png')) : ?>
+                        <figure>
+                            <a class="nosotros__item" href="<?php echo $directory . $file; ?>" data-lightbox="gallery-interior" data-title="">
+                                <img src="<?php echo $directory . $file; ?>" alt="">
+                            </a>
+                        </figure>
+                        <?php endif; 
+                    endwhile;
+                    $dirint->close();
+                ?>
+            </div>
         </div>
     </div>
 </div>
