@@ -42,12 +42,13 @@
             <div class="nosotros__gallery">
                 <?php 
                     $directory = "fotos/exterior/";
+                    $directory_min = "fotos/exterior/min/";
                     $dirint = dir($directory);
                     while (($file = $dirint->read()) != false) :
                         if (strpos($file,'jpg') || strpos($file,'jpeg') || strpos($file,'png')) : ?>
                         <figure>
                             <a class="nosotros__item" href="<?php echo $directory . $file; ?>" data-lightbox="gallery-exterior" data-title="">
-                                <img src="<?php echo $directory . $file; ?>" alt="">
+                                <img src="<?php echo $directory_min . $file; ?>" alt="">
                             </a>
                         </figure>
                         <?php endif; 
@@ -62,12 +63,13 @@
             <div class="nosotros__gallery">
                 <?php 
                     $directory = "fotos/";
+                    $directory_min = "fotos/min/";
                     $dirint = dir($directory);
                     while (($file = $dirint->read()) != false) :
                         if (strpos($file,'jpg') || strpos($file,'jpeg') || strpos($file,'png')) : ?>
                         <figure>
                             <a class="nosotros__item" href="<?php echo $directory . $file; ?>" data-lightbox="gallery-interior" data-title="">
-                                <img src="<?php echo $directory . $file; ?>" alt="">
+                                <img src="<?php echo $directory_min . $file; ?>" alt="">
                             </a>
                         </figure>
                         <?php endif; 
