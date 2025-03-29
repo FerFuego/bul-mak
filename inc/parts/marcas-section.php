@@ -19,11 +19,6 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="marcas__item">
-                        <img src="/new/img/marcas/bosch.jpeg" alt="bosch">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="marcas__item">
                         <img src="/new/img/marcas/crossmaster.jpeg" alt="crossmaster">
                     </div>
                 </div>
